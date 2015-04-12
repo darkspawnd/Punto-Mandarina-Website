@@ -7,7 +7,7 @@ var possiblePages = [
     'index',
     ""
 ];
-console.log(document.referrer);
+
 var referrer = document.referrer;
 var last = referrer.split("/");
 
