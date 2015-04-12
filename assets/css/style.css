@@ -4,22 +4,34 @@ body {
 } 
 
 /* Fixed Content */
-.orange {background: #ffb125;}
+.orange {background: #ffb125 !important;}
 .text-orange {color: #ffb125 !important;}
 .hidden {display: none; opacity: 0;}
 a {text-decoration: none;}
+.start {margin-top: 10vh; !important}
 
 /* Menu */
 .menu {
-    position: relative;
+    position: fixed;
     top: 0;
     height: 10vh;
-    margin-right: 10vw;
-    margin-left: 10vw;
+    min-height: 50px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 100%;
     font-size: 0;
+    z-index: 100;
+    background: white;
 }
 
-.index-logo {vertical-align: middle; display: inline-block; width: 20%; margin: 0;}
+.menu-wrapper {
+    position: relative;
+    margin: auto;
+    max-width: 1200px;
+}
+
+.index-logo {vertical-align: middle; display: inline-block; width: 10vw; margin: 0; float:left;}
 .index-logo > img {width: 100%;}
 
 .navigation {
@@ -28,7 +40,7 @@ a {text-decoration: none;}
     vertical-align: middle;
     height: 10vh;
     text-align: right;
-    width: 80%;
+    float: right;
     margin: 0;
 }
 
@@ -41,7 +53,7 @@ a {text-decoration: none;}
     font-weight: 700;
     color: white;
     margin-left: 5px;
-    font-size: 16px;
+    font-size: 14px;
     margin-right: 5px;
     cursor: pointer;
 }
@@ -75,6 +87,88 @@ a {text-decoration: none;}
     width: 100%;
 }
 
+/* Us */
+
+.us-container {
+    position: relative;
+    height: auto;
+    width: 100vw;
+    top: 17vh;
+    margin: auto;
+    overflow: hidden;
+}
+
+.us-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    font-size: 0;
+    top: 5%;
+    margin-bottom: 6%;
+}
+
+.us-wrapper > div { height: 100%; margin: auto; display: inline-block;} 
+.us-wrapper > .us-photo {height: 100%; vertical-align: top; max-width: 40%;}
+.us-photo > img {position: relative; height: 90%; top: 5%;}
+.us-wrapper > .side-text {font-size: 14px; width: 65%; height: auto; vertical-align: top;}
+.side-text > div {margin-left: 10%;}
+.side-text > .title {font-size: 5em;}
+.side-text > .description {font-size: 1.1em; width: 90%; line-height: 5vh; text-align: justify;}
+
+.how-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #ffb125;
+    overflow: hidden;
+}
+
+.how-boundaries {width: 100%; max-width: 1200px; height: 100%; margin: auto; font-size: 0; padding-top: 10%; padding-bottom: 5%;}
+.how-boundaries > .first-text {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 8vw;
+    width: 30vw;
+    color: white;
+    word-break: break-all;
+    top: 15%;
+    text-align: justify;
+}
+
+.how-boundaries > .description {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 18px;
+    width: 60%;
+    margin-left: 5%;
+    color: white;
+    line-height: 5vh;
+    text-align: justify;
+}
+
+
+/* Clients */
+
+.clients-container {
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    margin-top: 17vh;
+}
+
+.clients-header {
+    position: relative;
+    width: 100%;
+    font-size: 0;
+}
+
+.clients-header > .title {position: relative; float: left; font-size: 4vw; width: 40%; vertical-align: middle;}
+.clients-header > .quote-box {position: relative; float: right; width: 60%; height: 200px; background: #E2E2E2; vertical-align: middle;}
+
 /* Loader */
 
 .before-redirection {
@@ -83,9 +177,28 @@ a {text-decoration: none;}
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.95);
     z-index: 10000;
     display: none;
 }
 
+.before-redirection > img {
+    position: absolute;
+    width: 84px;
+    height: auto;
+    top: 50%;
+    left: 0;
+    right: 0;   
+    margin: auto;
+    transform: translate(0,-50%);
+}
 
+@media screen and (min-width: 1500px) {
+    /* Us Responsive Sizes */
+    .us-wrapper > .us-photo {vertical-align: middle;}
+    .us-wrapper > .side-text {vertical-align: middle;}
+    .side-text > .description{line-height: 2em;}
+    .how-boundaries > .first-text {width: 40%; font-size: 7vw;}
+    .how-boundaries > .description {width: 50%;}
+    .clients-header > .title {font-size: 3vw;}
+}
