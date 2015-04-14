@@ -29,9 +29,10 @@ a {text-decoration: none;}
     position: relative;
     margin: auto;
     max-width: 1200px;
+    background: red;
 }
 
-.index-logo {vertical-align: middle; display: inline-block; width: 10vw; margin: 0; float:left;}
+.index-logo {vertical-align: middle; display: inline-block; width: 20%; margin: 0; float:left; min-width: 200px;}
 .index-logo > img {width: 100%;}
 
 .navigation {
