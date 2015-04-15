@@ -28,11 +28,11 @@ a {text-decoration: none;}
 .menu-wrapper {
     position: relative;
     margin: auto;
+    height: 100%;
     max-width: 1200px;
-    background: red;
 }
 
-.index-logo {vertical-align: middle; display: inline-block; width: 20%; margin: 0; float:left; min-width: 200px;}
+.index-logo {position: relative; vertical-align: middle; transform: translate(0,-50%); top: 50%; display: inline-block; width: 10%; margin: 0; float:left; min-width: 100px;}
 .index-logo > img {width: 100%;}
 
 .navigation {
@@ -40,6 +40,8 @@ a {text-decoration: none;}
     display: inline-block;
     vertical-align: middle;
     height: 10vh;
+    min-height: 50px;
+    width: 80%;
     text-align: right;
     float: right;
     margin: 0;
@@ -94,7 +96,6 @@ a {text-decoration: none;}
     position: relative;
     height: auto;
     width: 100vw;
-    top: 17vh;
     margin: auto;
     overflow: hidden;
 }
@@ -107,11 +108,12 @@ a {text-decoration: none;}
     font-size: 0;
     top: 5%;
     margin-bottom: 6%;
+    margin-top: 13vh;
 }
 
 .us-wrapper > div { height: 100%; margin: auto; display: inline-block;} 
-.us-wrapper > .us-photo {height: 100%; vertical-align: top; max-width: 40%;}
-.us-photo > img {position: relative; height: 90%; top: 5%;}
+.us-wrapper > .us-photo {width: 35%; vertical-align: top;}
+.us-photo > img {position: relative; width: 90%; top: 5%;}
 .us-wrapper > .side-text {font-size: 14px; width: 65%; height: auto; vertical-align: top;}
 .side-text > div {margin-left: 10%;}
 .side-text > .title {font-size: 5em;}
@@ -192,6 +194,78 @@ a {text-decoration: none;}
     right: 0;   
     margin: auto;
     transform: translate(0,-50%);
+}
+
+/* Clients */
+
+.clients-grid {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    clear: both;
+    height: auto;
+    max-width: 1200px;
+    font-size: 0;
+    top: 50px;
+    text-align: justify;
+}
+
+.client {
+    position: relative;
+    display: inline-block;
+    width: 20%;
+    margin-right: 6.5%;
+    height: auto;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+.last-grid {
+    margin-right: 0;
+}
+
+.client > img {
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: opacity 0.5s ease;
+}
+
+.client > img:last-child {
+    position: absolute;
+    opacity: 0;
+    z-index: 2;
+}
+
+.client:hover img:last-child {
+    opacity: 1;
+}
+
+@media screen and (max-width: 1000px){
+    .us-wrapper > .side-text > div {margin: 0; margin-left: 4vw;}
+    .us-wrapper > .us-photo {margin-left: 10px;}
+}
+
+@media screen and (max-width: 1200px){
+    
+    /* MENU N US */
+    .us-wrapper > .side-text > .title {font-size: 3em;}
+    .us-wrapper {margin-top: 50px;}
+    .us-wrapper > .us-photo {margin-left: 10px;}
+    .navigation {margin-right: 20px;}
+    .index-logo { margin-left: 10px;}
+    .us-wrapper > .side-text {width: 60%;}
+    .how-boundaries {max-height: 100vh;}
+    .us-wrapper > .side-text > div {width: 90%;}
+    .side-text > .description {line-height: 1em;}
+    .how-boundaries > .first-text {margin-left: 10px;}
+    .how-boundaries > .description > p {font-size: 14px;}
+    .how-boundaries > .description {width: 58%;}
+    
+    /* Clients */
+    .clients-header {width: 95%; margin-left: 1%;}
+    .clients-grid {width: 95%; margin-left: 1%;}
+    
 }
 
 @media screen and (min-width: 1500px) {
