@@ -1,3 +1,7 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900);
+
+* {font-family: raleway;}
+
 body {
     width: 100vw;
     overflow-x: hidden;
@@ -68,10 +72,11 @@ a {text-decoration: none;}
 
 .navigation-option > .no-home {color: #5d5d5d;}
 .navigation-option > .active {color: #ffb125;}
+.navigation-option > .active-o {color: #5d5d5d;}
 .navigation-option > .no-home:hover {color: #ffb125;}
 
 .navigation-option > .do-home {color: white;}
-.navigation-option > .do-home:hover {color: #ffb125;}
+.navigation-option > .do-home:hover {color: #5d5d5d;}
 
 /* Homepage */
 
@@ -170,7 +175,39 @@ a {text-decoration: none;}
 }
 
 .clients-header > .title {position: relative; float: left; font-size: 4vw; width: 40%; vertical-align: middle;}
-.clients-header > .quote-box {position: relative; float: right; width: 60%; height: 200px; background: #E2E2E2; vertical-align: middle;}
+.clients-header > .quote-box {position: relative; float: right; width: 60%; height: 200px; background: #E2E2E2; vertical-align: middle; overflow: hidden; white-space: nowrap;}
+
+.quote-box > .statement {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+}
+
+.statement > .statement-text {
+    position: relative;
+    display: table-cell;
+    height: 200px;
+    width: 100%;
+    white-space: normal;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.statement > .statement-text > p {
+    position: relative;
+    left: 10%;
+    font-size: 16px;
+    margin: 0;
+    text-align: center;
+    width: 80%;
+}
+
+.statement > .statement-text > .author {
+    text-align: right;
+    margin-top: 3%;
+}    
 
 /* Loader */
 
@@ -239,6 +276,77 @@ a {text-decoration: none;}
 .client:hover img:last-child {
     opacity: 1;
 }
+
+/* People */
+
+.people-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 17vh;
+    text-align: right;
+}
+
+.people-container > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.our-talent {
+    position: relative;
+    width: 50%;
+    font-size: 6em;
+    font-weight: 200;
+    text-align: left;
+}
+
+.talent {
+    position: relative;
+    width: 15%;
+    margin-right: 8%;
+    margin-top: 10px;
+    background: #ffb125;
+}
+
+.talent-photo, .talent-photo > img {
+    width: 100%;
+}
+
+.over-layer {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffb125;
+    opacity: 0.7;
+    transition: opacity 0.5s ease;
+}
+
+.talent:hover .over-layer {
+    opacity: 0;
+}
+
+.name {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    color: white;
+    font-size: 16px;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.talent-name {opacity: 0; width: 10px; overflow: hidden; transition: width 0.5s ease, opacity 0.1s ease;}
+.position {opacity: 0; font-size: 10px;letter-spacing: 2px; width: 0; overflow: hidden; transition: width 0.5s ease, opacity 0.1s ease; -webkit-transition-delay: 0.5s; transition-delay: 0.1s;}
+
+.name > p {text-align: left; background: #1F1F1F; margin: 0; margin-bottom: 5px; padding: 2px; width: 0;}
+
+.talent:hover .position {width: 200px; opacity: 1;}
+.talent:hover .talent-name  {width: 200px; opacity: 1;}
+
+/* MOBILE */
 
 @media screen and (max-width: 1000px){
     .us-wrapper > .side-text > div {margin: 0; margin-left: 4vw;}

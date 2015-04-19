@@ -31,4 +31,30 @@ window.onload = function () {
                 return false;
             }
     });
+    
+    var nextMessage = 0, time = 5000; 
+    function clientsLoop() {
+        var quotes = document.getElementsByClassName("statement");
+        $(".quote-box").stop().animate({
+            scrollLeft: nextMessage * $(".quote-box").width()
+        });
+        nextMessage++;
+        if(nextMessage >= quotes.length -1 ){nextMessage = 0;}
+        setTimeout(clientsLoop,time);
+    }
+    
+    clientsLoop();
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
