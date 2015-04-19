@@ -9,6 +9,10 @@
         <link href="./assets/css/normalize.css" rel="stylesheet" type="text/css">
         <link href="./assets/css/style.css" rel="stylesheet" type="text/css">
         <script src="./assets/js/jquery.js" type="application/javascript"></script>
+        <script src="./assets/js/modernizr/modernizr.js" type="application/javascript"></script>
+        <script src="./assets/js/shufflejs/dist/jquery.shuffle.min.js" type="application/javascript"></script>
+        <script src="./assets/js/jquery.nicescroll.min.js" type="application/javascript"></script>
+        <script src="./assets/js/grid.js" type="application/javascript"></script>
         <script async src="./assets/js/actions.js" type="application/javascript"></script>
     </head>
     <body class="home">
@@ -25,20 +29,84 @@
                         <div class="navigation-option"><a href="./nosotros" class="no-home">Nosotros</a></div>
                         <div class="navigation-option"><a href="./clientes" class="no-home">Clientes</a></div>
                         <div class="navigation-option"><a href="./gente" class="no-home">Gente</a></div>
-                        <div class="navigation-option"><a href="#" class="no-home">Contacto</a></div>
+                        <div class="navigation-option"><a href="#contact" class="no-home" id="contact">Contacto</a></div>
                     </div>
                 </div>
             </div>
         </header>
         
+        <!-- Contact -->
+        
+        <div class="contact-container">
+            <div class="contact-content">
+                <div id="close-contact"> [x] cerrar </div>
+                <input type="text" placeholder="nombre" id="nombre"/>
+                <input type="text" placeholder="asunto" id="asunto"/>
+                <input type="text" placeholder="email" id="email"/>
+                <textarea id="mensaje" placeholder="mensaje..."></textarea>
+                <button> Enviar </button>
+            </div>
+        </div>
+        
         <!-- Work -->
         
         <div class="work-container start">
-        
+            
+            <div class="work-menu">
+                <div class="menu-opt" id="branding"> &#9675; Branding </div>
+                <div class="menu-opt" id="comunicacion"> &#9675; Comunicación </div>
+                <div class="menu-opt" id="multimedia"> &#9675; Multimedia </div>
+                <div class="menu-opt" id="web"> &#9675; Web </div>
+            </div>
+            <div class="work-grid" id="grid">
+                <div class="work-element" data-group="multimedia">
+                    <a href="./proyecto1">
+                        <div class="work-image">
+                            <img src="./assets/images/work/work1.jpg" alt="trabajo1" />
+                        </div>
+                        <div class="work-description">
+                            <p> Nombre del Proyecto </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="work-element" data-group="comunicacion">
+                    <a href="./proyecto2">
+                        <div class="work-image">
+                            <img src="./assets/images/work/work2.jpg" alt="trabajo1" />
+                        </div>
+                        <div class="work-description">
+                            <p> Nombre del Proyecto </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="work-element" data-group="branding">
+                    <a href="./proyecto3">
+                        <div class="work-image">
+                            <img src="./assets/images/work/work3.jpg" alt="trabajo1" />
+                        </div>
+                        <div class="work-description">
+                            <p> Nombre del Proyecto </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="work-element" data-group="web">
+                    <a href="./proyecto4">
+                        <div class="work-image">
+                            <img src="./assets/images/work/work4.jpg" alt="trabajo1" />
+                        </div>
+                        <div class="work-description">
+                            <p> Nombre del Proyecto </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
-        
         
         <footer>
         </footer>
     </body>
 </html>
+
+
+
+

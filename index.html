@@ -9,6 +9,7 @@
         <link href="./assets/css/normalize.css" rel="stylesheet" type="text/css">
         <link href="./assets/css/style.css" rel="stylesheet" type="text/css">
         <script src="./assets/js/jquery.js" type="application/javascript"></script>
+        <script src="./assets/js/jquery.nicescroll.min.js" type="application/javascript"></script>
         <script async src="./assets/js/actions.js" type="application/javascript"></script>
     </head>
     <body class="home orange">
@@ -25,11 +26,24 @@
                         <div class="navigation-option"><a href="./nosotros" class="do-home">Nosotros</a></div>
                         <div class="navigation-option"><a href="./clientes" class="do-home">Clientes</a></div>
                         <div class="navigation-option"><a href="./gente" class="do-home">Gente</a></div>
-                        <div class="navigation-option"><a href="#" class="do-home">Contacto</a></div>
+                        <div class="navigation-option"><a href="#contact" class="do-home" id="contact">Contacto</a></div>
                     </div>
                 </div>
             </div>
         </header>
+        
+        <!-- Contact -->
+        
+        <div class="contact-container">
+            <div class="contact-content">
+                <div id="close-contact"> [x] cerrar </div>
+                <input type="text" placeholder="nombre" id="nombre"/>
+                <input type="text" placeholder="asunto" id="asunto"/>
+                <input type="text" placeholder="email" id="email"/>
+                <textarea id="mensaje" placeholder="mensaje..."></textarea>
+                <button> Enviar </button>
+            </div>
+        </div>
         
         <!-- Home Page -->
         
