@@ -513,6 +513,109 @@ button:hover {
     color: white;
 }
 
+/* Projec */
+
+.project-container {
+    position: relative;
+    height: auto;
+    width: auto;
+}
+
+.banner {
+    position: relative;
+    width: 100vw;
+    background: #ffb125;
+}
+
+.banner-content {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    margin: auto;
+    margin-top: 150px;
+    text-align: center;
+}
+
+
+.banner-content > div {position: relative; display: inline-block; vertical-align: middle;}
+
+.project-image {
+    position: relative;
+    height: 120%;
+    top: -10%;
+    width: auto;
+}
+
+.project-title {position: relative; top: -10%; font-size: 4em; width: 40%; text-align: left; word-spacing: 500px; margin-left: 50px; font-weight: 200; color: white;}
+#close-project {position: absolute !important; height: auto; width: auto; left: 90%; top: 45%; font-size: 3em; font-weight: 200; color: white; cursor: pointer; transition: all 0.5s ease;}
+
+.close-project:hover {
+    transform: rotate(180deg);
+}
+
+
+.project-image > img {height: 100%;}
+
+.project-grid {
+    width: 100%;
+    margin: auto;
+    max-width: 1200px;
+    height: auto;
+    margin-top: 50px;
+    column-count: 2;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    -ms-column-count: 2;
+    -o-column-count: 2;
+    column-gap: 5px;
+    -webkit-column-gap: 5px;
+    -moz-column-gap: 5px;
+    -ms-column-gap: 5px;
+    -o-column-gap: 5px;
+    margin-bottom: 200px;
+}
+
+.project-photo, .project-photo > img {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+}
+
+.photo-visualizer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
+    z-index: 9999;
+    display: none;
+}
+
+.close-gallery {
+    position: absolute;
+    right: 50px;
+    color: white;
+    cursor: pointer;
+    top: 20px;
+    text-align: center;
+}
+
+.photo-middle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 80%;
+    top: 10%;
+    text-align: center;
+    width: auto;
+}
+
+.photo-middle > img {
+    height: 100%;
+}
 
 /* Mobile */
 

@@ -17,4 +17,7 @@ if(referrer != ""){
             $(".before-redirection").show();
         }
     }
+    if(last[last.length - 2] === "projects"){
+        $(".before-redirection").show();
+    }
 }

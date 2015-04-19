@@ -1,7 +1,5 @@
 window.onload = function () {
     
-    $("body").niceScroll();
-    
     //Deactivate Prelaoder
     setTimeout(function(){$(".before-redirection").fadeOut();},300);
     // Preload Before Redirecting | Not applied to Anchors Nor Targets
@@ -105,6 +103,10 @@ window.onload = function () {
             top: -100 + "%"
         });
         contactStatus = 0;
+    });
+    
+    $("#close-project").click(function () {
+        window.location = "../trabajo"
     });
     
 }
